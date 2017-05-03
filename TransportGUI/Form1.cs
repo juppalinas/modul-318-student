@@ -29,12 +29,14 @@ namespace TransportGUI
         {
             string Connections = comboBox1.Text;
             {
+                listBox1.Items.Clear();
                 Connections connect = new Connections();
                 var connections = Trans.GetConnections(comboBox1.Text, comboBox2.Text);
                 foreach (Connection c in connections.ConnectionList)
                 {
-
+                    
                     listBox1.Items.Add("Von" + c.From.Station.Name + "Nach" + c.To.Station.Name + c.From.Departure + c.To.Arrival  + c.Duration);
+
                 }
                if(comboBox1.Text == "" || comboBox2.Text == "")
                 {
