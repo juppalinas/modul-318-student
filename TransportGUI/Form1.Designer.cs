@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.comboBoxVon = new System.Windows.Forms.ComboBox();
+            this.comboBoxNach = new System.Windows.Forms.ComboBox();
             this.button1 = new System.Windows.Forms.Button();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.comboBox3 = new System.Windows.Forms.ComboBox();
@@ -43,23 +43,25 @@
             this.label3 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // comboBox1
+            // comboBoxVon
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(64, 12);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 21);
-            this.comboBox1.TabIndex = 0;
-            this.comboBox1.DropDown += new System.EventHandler(this.comboBox1_DropDown);
+            this.comboBoxVon.FormattingEnabled = true;
+            this.comboBoxVon.Location = new System.Drawing.Point(64, 12);
+            this.comboBoxVon.Name = "comboBoxVon";
+            this.comboBoxVon.Size = new System.Drawing.Size(121, 21);
+            this.comboBoxVon.TabIndex = 0;
+            this.comboBoxVon.DropDown += new System.EventHandler(this.comboBox1_DropDown);
+            this.comboBoxVon.TextUpdate += new System.EventHandler(this.comboBoxVon_TextUpdate);
             // 
-            // comboBox2
+            // comboBoxNach
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(64, 71);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(121, 21);
-            this.comboBox2.TabIndex = 1;
-            this.comboBox2.DropDown += new System.EventHandler(this.comboBox2_DropDown);
+            this.comboBoxNach.FormattingEnabled = true;
+            this.comboBoxNach.Location = new System.Drawing.Point(64, 71);
+            this.comboBoxNach.Name = "comboBoxNach";
+            this.comboBoxNach.Size = new System.Drawing.Size(121, 21);
+            this.comboBoxNach.TabIndex = 1;
+            this.comboBoxNach.DropDown += new System.EventHandler(this.comboBox2_DropDown);
+            this.comboBoxNach.TextUpdate += new System.EventHandler(this.comboBox2_TextUpdate);
             // 
             // button1
             // 
@@ -69,7 +71,6 @@
             this.button1.TabIndex = 2;
             this.button1.Text = "Change";
             this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // dateTimePicker1
             // 
@@ -261,8 +262,8 @@
             this.Controls.Add(this.comboBox3);
             this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.comboBox2);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.comboBoxNach);
+            this.Controls.Add(this.comboBoxVon);
             this.Name = "Form1";
             this.Text = "Form1";
             this.ResumeLayout(false);
@@ -272,8 +273,8 @@
 
         #endregion
 
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ComboBox comboBoxVon;
+        private System.Windows.Forms.ComboBox comboBoxNach;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.ComboBox comboBox3;
