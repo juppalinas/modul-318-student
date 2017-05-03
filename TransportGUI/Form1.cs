@@ -9,10 +9,12 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using SwissTransport;
 
+
 namespace TransportGUI
 {
     public partial class Form1 : Form
     {
+        public ITransport Trans = new Transport();
         public Form1()
         {
             InitializeComponent();
@@ -27,12 +29,12 @@ namespace TransportGUI
         {
             string Connections = comboBox1.Text;
             {
-                ITransport testee = new Transport();
-                var connections = testee.GetConnections("Sursee", "Luzern");
+                Connections connect = new Connections();
+                var connections = Trans.GetConnections(comboBox1.Text, comboBox2.Text);
                 foreach (Connection c in connections.ConnectionList)
                 {
 
-                    listBox1.Items.Add(" " + c.From + "X:" + c.To.ToString() + "Score" + c.Duration);
+                    listBox1.Items.Add("Von" + c.From.Station.Name + "Nach" + c.To.Station.Name + c.From.Departure + c.To.Arrival  + c.Duration);
                 }
                if(comboBox1.Text == "" || comboBox2.Text == "")
                 {

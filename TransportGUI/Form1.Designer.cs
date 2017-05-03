@@ -82,30 +82,30 @@
             // 
             this.comboBox3.FormattingEnabled = true;
             this.comboBox3.Items.AddRange(new object[] {
-            "00",
-            "01",
-            "02",
-            "03",
-            "04",
-            "05",
-            "06",
-            "07",
-            "08",
-            "09",
-            "10",
-            "11",
-            "12",
-            "13",
-            "14",
-            "15",
-            "16",
-            "17",
-            "18",
-            "19",
-            "20",
-            "21",
-            "22",
-            "23"});
+            "00h",
+            "01h",
+            "02h",
+            "03h",
+            "04h",
+            "05h",
+            "06h",
+            "07h",
+            "08h",
+            "09h",
+            "10h",
+            "11h",
+            "12h",
+            "13h",
+            "14h",
+            "15h",
+            "16h",
+            "17h",
+            "18h",
+            "19h",
+            "20h",
+            "21h",
+            "22h",
+            "23h"});
             this.comboBox3.Location = new System.Drawing.Point(219, 124);
             this.comboBox3.Name = "comboBox3";
             this.comboBox3.Size = new System.Drawing.Size(57, 21);
@@ -123,7 +123,7 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(394, 12);
+            this.button3.Location = new System.Drawing.Point(479, 10);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(75, 23);
             this.button3.TabIndex = 7;
@@ -154,7 +154,7 @@
             this.listBox1.FormattingEnabled = true;
             this.listBox1.Location = new System.Drawing.Point(12, 165);
             this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(328, 329);
+            this.listBox1.Size = new System.Drawing.Size(541, 329);
             this.listBox1.TabIndex = 10;
             // 
             // button4
@@ -171,66 +171,66 @@
             // 
             this.comboBox4.FormattingEnabled = true;
             this.comboBox4.Items.AddRange(new object[] {
-            "00",
-            "01",
-            "02",
-            "03",
-            "04",
-            "05",
-            "06",
-            "07",
-            "08",
-            "09",
-            "10",
-            "11",
-            "12",
-            "13",
-            "14",
-            "15",
-            "16",
-            "17",
-            "18",
-            "19",
-            "20",
-            "21",
-            "22",
-            "23",
-            "24",
-            "25",
-            "26",
-            "27",
-            "28",
-            "29",
-            "30",
-            "31",
-            "32",
-            "33",
-            "34",
-            "35",
-            "36",
-            "37",
-            "38",
-            "39",
-            "40",
-            "41",
-            "42",
-            "43",
-            "44",
-            "45",
-            "46",
-            "47",
-            "48",
-            "49",
-            "50",
-            "51",
-            "52",
-            "53",
-            "54",
-            "55",
-            "56",
-            "57",
-            "58",
-            "59"});
+            "00min",
+            "01min",
+            "02min",
+            "03min",
+            "04min",
+            "05min",
+            "06min",
+            "07min",
+            "08min",
+            "09min",
+            "10min",
+            "11min",
+            "12min",
+            "13min",
+            "14min",
+            "15min",
+            "16min",
+            "17min",
+            "18min",
+            "19min",
+            "20min",
+            "21min",
+            "22min",
+            "23min",
+            "24min",
+            "25min",
+            "26min",
+            "27min",
+            "28min",
+            "29min",
+            "30min",
+            "31min",
+            "32min",
+            "33min",
+            "34min",
+            "35min",
+            "36min",
+            "37min",
+            "38min",
+            "39min",
+            "40min",
+            "41min",
+            "42min",
+            "43min",
+            "44min",
+            "45min",
+            "46min",
+            "47min",
+            "48min",
+            "49min",
+            "50min",
+            "51min",
+            "52min",
+            "53min",
+            "54min",
+            "55min",
+            "56min",
+            "57min",
+            "58min",
+            "59min"});
             this.comboBox4.Location = new System.Drawing.Point(297, 124);
             this.comboBox4.Name = "comboBox4";
             this.comboBox4.Size = new System.Drawing.Size(58, 21);
@@ -249,7 +249,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(481, 529);
+            this.ClientSize = new System.Drawing.Size(566, 529);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.comboBox4);
             this.Controls.Add(this.button4);
