@@ -23,11 +23,6 @@ namespace TransportGUI
             MessageBox.Show("Bitte Kontaktieren sie uns unter der Nummer: 079 351 59 84");
         }
 
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            
-        }
-
         private void button4_Click(object sender, EventArgs e)
         {
             string Connections = comboBox1.Text;
@@ -47,11 +42,45 @@ namespace TransportGUI
 
         }
 
-        
-            private void Refresh_Click(object sender, EventArgs e)
+        private void button2_Click(object sender, EventArgs e)
         {
             this.Update();
-       }
+        }
+
+       
+
+        private void comboBox1_DropDown(object sender, EventArgs e)
+        {
+             string suche = comboBox1.Text;
+
+            ITransport testee = new Transport();
+            var stations = testee.GetStations(suche);
+            foreach (Station s in stations.StationList)
+            {
+                comboBox1.Items.Add(" " + s.Name );
+
+
+            }
+        }
+
+        private void comboBox2_DropDown(object sender, EventArgs e)
+        {
+            string suche = comboBox2.Text;
+
+            ITransport testee = new Transport();
+            var stations = testee.GetStations(suche);
+            foreach (Station s in stations.StationList)
+            {
+                comboBox2.Items.Add(" " + s.Name );
+
+
+            }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            
+        }
     }
-  }
+    }
 
