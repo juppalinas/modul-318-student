@@ -34,11 +34,34 @@ namespace TransportGUI
                 var connections = Trans.GetConnections(comboBoxVon.Text, comboBoxNach.Text);
                 foreach (Connection c in connections.ConnectionList)
                 {
-                    
-                    listBox1.Items.Add("Von" + c.From.Station.Name + "Nach" + c.To.Station.Name + c.From.Departure + c.To.Arrival  + c.Duration);
+
+                    listBox1.Items.Add("Von" + c.From.Station.Name + "Nach" + c.To.Station.Name + c.From.Departure + c.To.Arrival + c.Duration);
+
+
+                    /*listView1.Columns.Add("Startstation");
+                    listView1.Columns.Add("Endstation");
+                    listView1.Columns.Add("Abfahrt");
+                    listView1.Columns.Add("Ankunft");
+                    listView1.Columns.Add("Dauer");
+
+                    ListViewItem item1 = new ListViewItem(c.From.Station.Name);
+                    ListViewItem item2 = new ListViewItem(c.From.Station.Name);
+                    ListViewItem item3 = new ListViewItem(c.From.Station.Name);
+
+                    item1.SubItems.Add(c.From.Departure);
+                    item1.SubItems.Add(c.To.Arrival);
+                    item1.SubItems.Add(c.Duration);
+
+                    listView1.Items.Add(item1);
+                    listView1.Items.Add(item2);
+                    listView1.Items.Add(item3);
+
+                    listView1.View = View.Details;
+                    listView1.FullRowSelect = true;*/
 
                 }
-               if(comboBoxVon.Text == "" || comboBoxNach.Text == "")
+
+                if (comboBoxVon.Text == "" || comboBoxNach.Text == "")
                 {
                     MessageBox.Show("Bitte wählen sie eine Station aus");
                 }
@@ -51,17 +74,17 @@ namespace TransportGUI
             this.Update();
         }
 
-       
+
 
         private void comboBox1_DropDown(object sender, EventArgs e)
         {
-             string suche = comboBoxVon.Text;
+            string suche = comboBoxVon.Text;
 
             ITransport testee = new Transport();
             var stations = testee.GetStations(suche);
             foreach (Station s in stations.StationList)
             {
-                comboBoxVon.Items.Add(" " + s.Name );
+                comboBoxVon.Items.Add(" " + s.Name);
 
 
             }
@@ -75,14 +98,14 @@ namespace TransportGUI
             var stations = testee.GetStations(suche);
             foreach (Station s in stations.StationList)
             {
-                comboBoxNach.Items.Add(" " + s.Name );
+                comboBoxNach.Items.Add(" " + s.Name);
 
 
             }
         }
 
-        
-            private void Wombocombo(ComboBox cb)
+
+        private void Wombocombo(ComboBox cb)
         {
             string cbtext = cb.Text;
 
@@ -93,13 +116,12 @@ namespace TransportGUI
                 cb.Items.Clear();
                 cb.DroppedDown = true;
                 cb.SelectionStart = cb.Text.Length;
-                foreach(Station s in stations.StationList)
+                foreach (Station s in stations.StationList)
                 {
                     cb.Items.Add(s.Name);
                 }
             }
         }
-
         private void comboBoxVon_TextUpdate(object sender, EventArgs e)
         {
             Wombocombo(comboBoxVon);
@@ -109,7 +131,10 @@ namespace TransportGUI
         {
             Wombocombo(comboBoxNach);
         }
-    }
-  }
-    
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
+    }
+}
