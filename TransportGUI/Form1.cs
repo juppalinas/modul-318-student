@@ -29,35 +29,43 @@ namespace TransportGUI
         {
             string Connections = comboBoxVon.Text;
             {
-                listBox1.Items.Clear();
+                
                 Connections connect = new Connections();
-                var connections = Trans.GetConnections(comboBoxVon.Text, comboBoxNach.Text);
+                string date = "&date=" + dateTimePicker1.Value.Year + "-" + dateTimePicker1.Value.Month + "-" + dateTimePicker1.Value.Day;
+                string time = "&time=" + dateTimePicker1.Value.Hour + ":" + dateTimePicker1.Value.Minute + ":" + dateTimePicker1.Value.Second;
+                var connections = Trans.GetConnections(comboBoxVon.Text, comboBoxNach.Text, date, time);
+                if (listView1.Columns.Count==0)
+                {
+                    listView1.Columns.Add("", 0);
+                    listView1.Columns.Add("Startstation",100);
+                    listView1.Columns.Add("Endstation",100);
+                    listView1.Columns.Add("Abfahrt",100);
+                    listView1.Columns.Add("Ankunft",100);
+                    listView1.Columns.Add("Dauer",100);
+                    
+                }listView1.Items.Clear();
                 foreach (Connection c in connections.ConnectionList)
                 {
+                    DateTime departure = Convert.ToDateTime(c.From.Departure);
+                    string departuretime = departure.ToShortTimeString();
 
-                    listBox1.Items.Add("Von" + c.From.Station.Name + "Nach" + c.To.Station.Name + c.From.Departure + c.To.Arrival + c.Duration);
+                    DateTime arrival = Convert.ToDateTime(c.To.Arrival);
+                    string arrivaltime = arrival.ToShortTimeString();
 
 
-                    /*listView1.Columns.Add("Startstation");
-                    listView1.Columns.Add("Endstation");
-                    listView1.Columns.Add("Abfahrt");
-                    listView1.Columns.Add("Ankunft");
-                    listView1.Columns.Add("Dauer");
 
-                    ListViewItem item1 = new ListViewItem(c.From.Station.Name);
-                    ListViewItem item2 = new ListViewItem(c.From.Station.Name);
-                    ListViewItem item3 = new ListViewItem(c.From.Station.Name);
+                    ListViewItem item1 = new ListViewItem("");
 
-                    item1.SubItems.Add(c.From.Departure);
-                    item1.SubItems.Add(c.To.Arrival);
+                    item1.SubItems.Add(c.From.Station.Name);
+                    item1.SubItems.Add(c.To.Station.Name);
+                    item1.SubItems.Add(departuretime);
+                    item1.SubItems.Add(arrivaltime);
                     item1.SubItems.Add(c.Duration);
 
                     listView1.Items.Add(item1);
-                    listView1.Items.Add(item2);
-                    listView1.Items.Add(item3);
 
                     listView1.View = View.Details;
-                    listView1.FullRowSelect = true;*/
+                    listView1.FullRowSelect = true;
 
                 }
 
@@ -132,9 +140,12 @@ namespace TransportGUI
             Wombocombo(comboBoxNach);
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void button1_Click_1(object sender, EventArgs e)
         {
-
+            string von = comboBoxVon.Text;
+            string nach = comboBoxNach.Text;
+            comboBoxVon.Text = nach;
+            comboBoxNach.Text = von;
         }
     }
 }
