@@ -15,6 +15,12 @@
     {
         "Entry"
         {
+        "MsmKey" = "8:_018D9C3747CA402CA3FF4EB0D0E30A2A"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_57BE92DA380A45B7B63069EECB8E1D28"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
@@ -128,6 +134,14 @@
             "PrerequisitesLocation" = "2:1"
             "Url" = "8:"
             "ComponentsUrl" = "8:"
+                "Items"
+                {
+                    "{EDC2488A-8267-493A-A98E-7D9C3B36CDF3}:.NETFramework,Version=v4.5"
+                    {
+                    "Name" = "8:Microsoft .NET Framework 4.5 (x86 and x64)"
+                    "ProductCode" = "8:.NETFramework,Version=v4.5"
+                    }
+                }
             }
         }
         "Release"
@@ -152,6 +166,14 @@
             "PrerequisitesLocation" = "2:1"
             "Url" = "8:"
             "ComponentsUrl" = "8:"
+                "Items"
+                {
+                    "{EDC2488A-8267-493A-A98E-7D9C3B36CDF3}:.NETFramework,Version=v4.5"
+                    {
+                    "Name" = "8:Microsoft .NET Framework 4.5 (x86 and x64)"
+                    "ProductCode" = "8:.NETFramework,Version=v4.5"
+                    }
+                }
             }
         }
     }
@@ -182,6 +204,26 @@
         }
         "File"
         {
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_018D9C3747CA402CA3FF4EB0D0E30A2A"
+            {
+            "SourcePath" = "8:..\\..\\..\\..\\..\\..\\Pictures\\Awicons-Vista-Artistic-2-Hot-Train.ico"
+            "TargetName" = "8:Awicons-Vista-Artistic-2-Hot-Train.ico"
+            "Tag" = "8:"
+            "Folder" = "8:_8F667053C0AA4E8D9E3138F666CCF1DB"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
             "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_6CCCE4EFC2F51151AE25027FC08F59F5"
             {
             "AssemblyRegister" = "3:1"
@@ -394,7 +436,7 @@
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:Fahrplan SBB"
         "ProductCode" = "8:{62413B97-806C-48BF-8584-44A57BEE7F2B}"
-        "PackageCode" = "8:{C8D855DB-3638-4395-9799-BBA80915B4C8}"
+        "PackageCode" = "8:{BFF02B1E-47D7-481C-B9D4-C1C66F179277}"
         "UpgradeCode" = "8:{2159A6FC-205E-452B-93BD-8936EF110D85}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"
@@ -516,7 +558,7 @@
         {
             "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_0EED8AC1F9CD4C31A988918E2DBA939B"
             {
-            "Name" = "8:Shortcut to Primary output from TransportGUI (Active)"
+            "Name" = "8:SBB App"
             "Arguments" = "8:"
             "Description" = "8:"
             "ShowCmd" = "3:1"
@@ -525,7 +567,7 @@
             "Target" = "8:_57BE92DA380A45B7B63069EECB8E1D28"
             "Folder" = "8:_C682C2831B01404EAAB9CF6CBC634A66"
             "WorkingFolder" = "8:_8F667053C0AA4E8D9E3138F666CCF1DB"
-            "Icon" = "8:"
+            "Icon" = "8:_018D9C3747CA402CA3FF4EB0D0E30A2A"
             "Feature" = "8:"
             }
         }

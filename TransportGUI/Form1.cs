@@ -148,7 +148,7 @@ namespace TransportGUI
             /* dieses try/catch verhindert den Absturz des Programms durch zu schnelle eingabe*/
             try
             {
-                Wombocombo(comboBoxVon);
+                Wombocombo(comboBoxNach);
             }
             catch (Exception)
             {

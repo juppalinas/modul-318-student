@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.comboBoxVon = new System.Windows.Forms.ComboBox();
             this.comboBoxNach = new System.Windows.Forms.ComboBox();
             this.change_btn = new System.Windows.Forms.Button();
@@ -268,6 +269,7 @@
             this.Controls.Add(this.change_btn);
             this.Controls.Add(this.comboBoxNach);
             this.Controls.Add(this.comboBoxVon);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
             this.Text = "Form1";
             this.ResumeLayout(false);
