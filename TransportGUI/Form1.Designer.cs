@@ -30,8 +30,8 @@
         {
             this.comboBoxVon = new System.Windows.Forms.ComboBox();
             this.comboBoxNach = new System.Windows.Forms.ComboBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.change_btn = new System.Windows.Forms.Button();
+            this.Date_setter = new System.Windows.Forms.DateTimePicker();
             this.comboBox3 = new System.Windows.Forms.ComboBox();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
@@ -50,7 +50,7 @@
             this.comboBoxVon.Name = "comboBoxVon";
             this.comboBoxVon.Size = new System.Drawing.Size(121, 21);
             this.comboBoxVon.TabIndex = 0;
-            this.comboBoxVon.DropDown += new System.EventHandler(this.comboBox1_DropDown);
+            this.comboBoxVon.DropDown += new System.EventHandler(this.comboBoxVon_DropDown);
             this.comboBoxVon.TextUpdate += new System.EventHandler(this.comboBoxVon_TextUpdate);
             // 
             // comboBoxNach
@@ -60,27 +60,27 @@
             this.comboBoxNach.Name = "comboBoxNach";
             this.comboBoxNach.Size = new System.Drawing.Size(121, 21);
             this.comboBoxNach.TabIndex = 1;
-            this.comboBoxNach.DropDown += new System.EventHandler(this.comboBox2_DropDown);
-            this.comboBoxNach.TextUpdate += new System.EventHandler(this.comboBox2_TextUpdate);
+            this.comboBoxNach.DropDown += new System.EventHandler(this.comboBoxNach_DropDown);
+            this.comboBoxNach.TextUpdate += new System.EventHandler(this.comboBoxNach_TextUpdate);
             // 
-            // button1
+            // change_btn
             // 
-            this.button1.Location = new System.Drawing.Point(64, 39);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "Change";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click_1);
+            this.change_btn.Location = new System.Drawing.Point(64, 39);
+            this.change_btn.Name = "change_btn";
+            this.change_btn.Size = new System.Drawing.Size(75, 23);
+            this.change_btn.TabIndex = 2;
+            this.change_btn.Text = "Change";
+            this.change_btn.UseVisualStyleBackColor = true;
+            this.change_btn.Click += new System.EventHandler(this.change_btn_Click_1);
             // 
-            // dateTimePicker1
+            // Date_setter
             // 
-            this.dateTimePicker1.CustomFormat = "dd.MM.yyyy || HH.mm";
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePicker1.Location = new System.Drawing.Point(64, 122);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(131, 20);
-            this.dateTimePicker1.TabIndex = 3;
+            this.Date_setter.CustomFormat = "dd.MM.yyyy || HH.mm";
+            this.Date_setter.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.Date_setter.Location = new System.Drawing.Point(64, 122);
+            this.Date_setter.Name = "Date_setter";
+            this.Date_setter.Size = new System.Drawing.Size(131, 20);
+            this.Date_setter.TabIndex = 3;
             // 
             // comboBox3
             // 
@@ -123,7 +123,7 @@
             this.button2.TabIndex = 6;
             this.button2.Text = "Refresh";
             this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.button2.Click += new System.EventHandler(this.btn_Refresh_Click);
             // 
             // button3
             // 
@@ -133,7 +133,7 @@
             this.button3.TabIndex = 7;
             this.button3.Text = "Help";
             this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.button3.Click += new System.EventHandler(this.btn_Help_Click);
             // 
             // label1
             // 
@@ -161,7 +161,7 @@
             this.button4.TabIndex = 11;
             this.button4.Text = "Verbindungen suchen";
             this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
+            this.button4.Click += new System.EventHandler(this.btn_Verbindung_Click);
             // 
             // comboBox4
             // 
@@ -264,8 +264,8 @@
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.comboBox3);
-            this.Controls.Add(this.dateTimePicker1);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.Date_setter);
+            this.Controls.Add(this.change_btn);
             this.Controls.Add(this.comboBoxNach);
             this.Controls.Add(this.comboBoxVon);
             this.Name = "Form1";
@@ -279,8 +279,8 @@
 
         private System.Windows.Forms.ComboBox comboBoxVon;
         private System.Windows.Forms.ComboBox comboBoxNach;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.Button change_btn;
+        private System.Windows.Forms.DateTimePicker Date_setter;
         private System.Windows.Forms.ComboBox comboBox3;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;

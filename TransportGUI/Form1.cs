@@ -20,19 +20,19 @@ namespace TransportGUI
             InitializeComponent();
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void btn_Help_Click(object sender, EventArgs e)
         {
             MessageBox.Show("Bitte Kontaktieren sie uns unter der Nummer: 079 351 59 84");
         }
 
-        private void button4_Click(object sender, EventArgs e)
+        private void btn_Verbindung_Click(object sender, EventArgs e)
         {
             string Connections = comboBoxVon.Text;
             {
                 
                 Connections connect = new Connections();
-                string date = "&date=" + dateTimePicker1.Value.Year + "-" + dateTimePicker1.Value.Month + "-" + dateTimePicker1.Value.Day;
-                string time = "&time=" + dateTimePicker1.Value.Hour + ":" + dateTimePicker1.Value.Minute + ":" + dateTimePicker1.Value.Second;
+                string date = "&date=" + Date_setter.Value.Year + "-" + Date_setter.Value.Month + "-" + Date_setter.Value.Day;
+                string time = "&time=" + Date_setter.Value.Hour + ":" + Date_setter.Value.Minute + ":" + Date_setter.Value.Second;
                 var connections = Trans.GetConnections(comboBoxVon.Text, comboBoxNach.Text, date, time);
                 if (listView1.Columns.Count==0)
                 {
@@ -77,14 +77,14 @@ namespace TransportGUI
 
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void btn_Refresh_Click(object sender, EventArgs e)
         {
             this.Update();
         }
 
 
 
-        private void comboBox1_DropDown(object sender, EventArgs e)
+        private void comboBoxVon_DropDown(object sender, EventArgs e)
         {
             string suche = comboBoxVon.Text;
 
@@ -98,7 +98,7 @@ namespace TransportGUI
             }
         }
 
-        private void comboBox2_DropDown(object sender, EventArgs e)
+        private void comboBoxNach_DropDown(object sender, EventArgs e)
         {
             string suche = comboBoxNach.Text;
 
@@ -112,7 +112,7 @@ namespace TransportGUI
             }
         }
 
-
+        /*Hier wird das Dropdown automatisch ab drei Buchstaben geöffnet */
         private void Wombocombo(ComboBox cb)
         {
             string cbtext = cb.Text;
@@ -132,15 +132,31 @@ namespace TransportGUI
         }
         private void comboBoxVon_TextUpdate(object sender, EventArgs e)
         {
-            Wombocombo(comboBoxVon);
+            /* dieses try/catch verhindert den Absturz des Programms durch zu schnelle eingabe*/
+            try
+            {
+                Wombocombo(comboBoxVon);
+            }
+            catch(Exception)
+            {
+                MessageBox.Show("Absturz gefahr! /n Bitte schreiben sie langsamer");
+            }
         }
 
-        private void comboBox2_TextUpdate(object sender, EventArgs e)
+        private void comboBoxNach_TextUpdate(object sender, EventArgs e)
         {
-            Wombocombo(comboBoxNach);
+            /* dieses try/catch verhindert den Absturz des Programms durch zu schnelle eingabe*/
+            try
+            {
+                Wombocombo(comboBoxVon);
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Absturz gefahr! /n Bitte schreiben sie langsamer");
+            }
         }
-
-        private void button1_Click_1(object sender, EventArgs e)
+        /* Dieses Event vertauscht Abfahrts und Ankunftsort */
+        private void change_btn_Click_1(object sender, EventArgs e)
         {
             string von = comboBoxVon.Text;
             string nach = comboBoxNach.Text;
